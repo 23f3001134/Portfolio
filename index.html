@@ -4,16 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khushi Gupta | Portfolio</title>
+  <meta name="description" content="Khushi Gupta is a frontend developer building responsive web apps with HTML, CSS, JavaScript and Vue.js. BS Data Science student at IIT Madras.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <style>
+    /* Small additions for the project links. Colors are inherited, so they match your theme. */
+    .project-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px; }
+    .project-links a { font-weight: 700; color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+    .project-links a:hover { text-decoration-thickness: 2px; }
+    .project-links a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="#" class="logo">KG</a>
-      <nav class="nav-links">
+      <a href="#" class="logo" aria-label="Back to top">KG</a>
+      <nav class="nav-links" aria-label="Main">
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#skills">Skills</a>
@@ -28,7 +36,7 @@
         <div class="hero-copy">
           <p class="tag">Frontend Developer + UI Designer</p>
           <h1>I build clean, fast, and memorable web experiences.</h1>
-          <p class="lead">I am KHUSHI GUPTA, a developer focused on responsive products, accessibility, and interfaces that feel sharp across devices.</p>
+          <p class="lead">I am Khushi Gupta, a developer focused on responsive products, accessibility, and interfaces that feel sharp across devices.</p>
           <div class="hero-actions">
             <a class="btn" href="#work">View Projects</a>
             <a class="btn btn-ghost" href="#contact">Hire Me</a>
@@ -52,19 +60,20 @@
           <p class="tag">About Me</p>
           <h2>From concept to production with clear execution.</h2>
           <p>I turn rough ideas into polished websites. My workflow combines structured layouts, reusable CSS architecture, and practical UX decisions for real users.</p>
+          <p>I am a BS Data Science student at IIT Madras with a B.Sc. in Mathematics, building full-stack projects with Vue.js and Flask.</p>
         </div>
         <div class="stats">
           <article>
-            <h3>1+</h3>
-            <p>Years Experience</p>
+            <h3>1</h3>
+            <p>Internship Completed</p>
           </article>
           <article>
             <h3>3+</h3>
             <p>Projects Delivered</p>
           </article>
           <article>
-            <h3>100%</h3>
-            <p>Responsive Layouts</p>
+            <h3>2+</h3>
+            <p>Google Certifications</p>
           </article>
         </div>
       </div>
@@ -76,19 +85,27 @@
         <h2>Recent projects</h2>
         <div class="projects">
           <article class="project-card">
-            <h3>Vechile Parking Mangement System</h3>
-            <p>Designed and developed a system to manage vehicle parking efficiently.</p>
-            <span>Based on HTML, CSS, JS</span>
+            <h3>Hospital Management System V2 (MediSys)</h3>
+            <p>A Vue.js single-page app for Admin, Doctor and Patient roles, with dashboards, search and appointment booking, connected to a Flask REST API.</p>
+            <span>Based on Vue.js, Axios, Bootstrap, Flask REST API and JWT login</span>
+            <div class="project-links">
+              <a href="https://hmv-v2.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href="https://github.com/23f3001134/hmv_v2" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
           </article>
           <article class="project-card">
             <h3>Hospital Management System</h3>
-            <p>Designed and developed a system to manage hospital operations efficiently.</p>
-            <span>Based on Python Flask,Bootstrap,CSS Modules</span>
+            <p>A web app for patient registration, appointment scheduling and medical record tracking, built with Flask.</p>
+            <span>Based on Python, Flask, HTML, CSS, Bootstrap and SQLite</span>
+            <!-- To add links, paste inside this card:
+            <div class="project-links"><a href="YOUR_LIVE_URL" target="_blank" rel="noopener noreferrer">Live Demo</a> <a href="YOUR_GITHUB_URL" target="_blank" rel="noopener noreferrer">GitHub</a></div> -->
           </article>
           <article class="project-card">
-            <h3>Hospital Management System V2</h3>
-            <p>Designed and developed a system to manage hospital operations efficiently.</p>
-            <span>Based on API for backend and frontend useing Vue.js</span>
+            <h3>Vehicle Parking Management System</h3>
+            <p>A web interface for tracking vehicle entry and exit and monitoring parking availability.</p>
+            <span>Based on HTML, CSS, JS</span>
+            <!-- To add links, paste inside this card:
+            <div class="project-links"><a href="YOUR_LIVE_URL" target="_blank" rel="noopener noreferrer">Live Demo</a> <a href="YOUR_GITHUB_URL" target="_blank" rel="noopener noreferrer">GitHub</a></div> -->
           </article>
         </div>
       </div>
@@ -102,12 +119,31 @@
           <span>HTML5</span>
           <span>CSS3</span>
           <span>JavaScript</span>
+          <span>Vue.js</span>
+          <span>Bootstrap</span>
           <span>Responsive Design</span>
+          <span>REST API Integration</span>
           <span>Accessibility</span>
           <span>Git/GitHub</span>
           <span>Python</span>
-          <span>Vue.js</span>
+          <span>Flask</span>
           <span>Performance Optimization</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section skills">
+      <div class="container">
+        <p class="tag">Certifications</p>
+        <h2>Badges and certificates</h2>
+        <div class="skill-chips">
+          <span>Google Cloud: Engineer AI Agents with Agent Development Kit (ADK), Skill Badge, Aug 2026</span>
+          <span>Google: Create Your First Gemini Enterprise Application, Aug 2026</span>
+          <span>Google Student Ambassador Program: Build Night Edition (Participation)</span>
+          <!-- Add more badges by copying one of the lines above -->
+        </div>
+        <div class="project-links">
+          <a href="https://www.credly.com/users/khushi-gupta.2d11633a" target="_blank" rel="noopener noreferrer">View all badges on Credly</a>
         </div>
       </div>
     </section>
@@ -115,23 +151,21 @@
     <section id="contact" class="section contact">
       <div class="container contact-box">
         <h2>Let's build something useful.</h2>
-        <p>Available for freelance and full-time frontend roles.</p>
-        <a class="btn" href="mailto:mskhusig@gmail.com">mskhusig@gmail.com</a>
+        <p>Open to frontend developer internships and freelance projects.</p>
+        <a class="btn" href="mailto:mskhusi@gmail.com">mskhusi@gmail.com</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <p>&copy; 2026 KHUSHI GUPTA</p>
+      <p>&copy; 2026 Khushi Gupta</p>
       <div>
-        <a href="https://www.linkedin.com/in/khushi-gupta-9914b2244">LinkedIn</a>
-        <a href="https://github.com/khushilabs">GitHub</a>
-        <a href="https://www.behance.net/khushigupta">Behance</a>
+        <a href="https://www.linkedin.com/in/khushi-gupta-dev" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/23f3001134" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
   </footer>
 </body>
 </html>
-
 
